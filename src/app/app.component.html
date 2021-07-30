@@ -1,0 +1,34 @@
+<hello name="{{ name }}"></hello>
+<p>
+<h4>
+  String Interpolation
+</h4>
+<p> Ther {{'Server'}} ID is {{ServerId}} and the status is <b> {{GetServerStatus()}}</b></p>
+<!-- Changing the button disable dynamically
+first Button is disabled and the second button gets enabled after 5 seconds using property binding -->
+<h4>
+  Property binding
+</h4>
+<button disabled class="btn btn-primary"> Button 1</button>
+<br>
+<br>
+<br>
+<br>
+<button [disabled]=!canShowButton class="btn btn-primary"> Button 2</button>
+<p>[]= Square Brackets indicates to angular that we are using property binding , that we want to dynamically bind some
+  property</p>
+
+<h4> when to use string Interpolation vs PropertyBinding</h4>
+<p>{{canShowButton}}</p>
+<!--String interpolation-->
+<p [innerText]="canShowButton"></p>
+<!--Property Binding-->
+<p> if you want to output something in your Template, Print Some Text to it use String Interpolation -
+<li>
+You can add menthod there  and you must use curly braces</li>
+<li>
+String interpolation will work in normal templates not within the expression of that template i.e not withing property binding</li> </p>
+<p> if you want to change some property any html element or directive or component use property Binding -
+  <li> There are should not be any curly brace </li>
+  <li> Within "" - you must use typescript expression which returns some value which the propety Expects</li>
+</p>
